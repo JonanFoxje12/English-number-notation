@@ -1,0 +1,51 @@
+<html>
+    <head>
+        <title>English number notation</title>
+    </head>
+    <body>
+        <h1>English number notation</h1>
+        <input type="number" id="input"><br>
+        <input type="button" value="Convert to english number notation!" onclick="convert()">
+        <p id="output"></p>
+        <script>
+            const input = document.getElementById("input")
+            const output = document.getElementById("output")
+
+            function toEnglishNumberNotation(numberInput) {
+                let number = parseInt(numberInput)
+                return number.toLocaleString('en-US');
+            }
+
+            function convert() {
+                output.textContent = toEnglishNumberNotation(input.value)
+            }
+        </script>
+    </body>
+</html>
+
+<!-- <html>
+    <head>
+        <title>English number notation</title>
+    </head>
+    <body>
+        <h1>English number notation</h1>
+        <script>
+            // Vraag de gebruiker om een getal
+            const input = prompt("Voer een getal in:");
+
+            // Zet de tekst om naar een getal
+            const getal = parseInt(input);
+
+            if (!isNaN(getal)) {
+                // Formatteer met de Amerikaanse standaard (en-US) voor komma's
+                const geformatteerdGetal = getal.toLocaleString('en-US');
+                
+                console.log(geformatteerdGetal);
+                alert(geformatteerdGetal);
+            } else {
+                console.log("Dat is geen geldig getal.");
+            }
+
+        </script>
+    </body>
+</html> -->
